@@ -1,28 +1,28 @@
 # Learn more about configuring your app at https://shopify.dev/docs/apps/tools/cli/configuration
 
-client_id = "3d70ce8ffb27c23d8ab94bbfca906ad7"
-name = "redemption-solution\r"
-application_url = "https://example.com"
+client_id = "fe88878bc3e1bf4ee294173793142124"
+name = "redemption-solution-local"
+handle = "redemption-solution-local"
+application_url = "https://coming-workshops-ro-heights.trycloudflare.com"
 embedded = true
 
 [build]
-automatically_update_urls_on_dev = true
 include_config_on_deploy = true
+automatically_update_urls_on_dev = true
 
 [webhooks]
-api_version = "2025-10"
-
-  [[webhooks.subscriptions]]
-  topics = [ "app/uninstalled" ]
-  uri = "/webhooks/app/uninstalled"
-
-  [[webhooks.subscriptions]]
-  topics = [ "app/scopes_update" ]
-  uri = "/webhooks/app/scopes_update"
+api_version = "2025-07"
 
 [access_scopes]
 # Learn more at https://shopify.dev/docs/apps/tools/cli/configuration#access_scopes
-scopes = "write_products"
+scopes = "read_assigned_fulfillment_orders, read_customers, read_discounts, read_gift_cards, read_inventory, read_merchant_managed_fulfillment_orders, read_orders, read_third_party_fulfillment_orders, write_assigned_fulfillment_orders, write_discounts, write_gift_cards, write_inventory, write_merchant_managed_fulfillment_orders, write_orders, write_products, write_third_party_fulfillment_orders"
 
 [auth]
-redirect_urls = [ "https://example.com/api/auth" ]
+redirect_urls = [
+  "https://coming-workshops-ro-heights.trycloudflare.com/auth/callback",
+  "https://coming-workshops-ro-heights.trycloudflare.com/auth/shopify/callback",
+  "https://coming-workshops-ro-heights.trycloudflare.com/api/auth/callback"
+]
+
+[pos]
+embedded = false

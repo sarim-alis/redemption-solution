@@ -1,24 +1,12 @@
-# @shopify/shopify-app-template-react-router
-
-## 2025.07.24
--  Adds [App Bridge web components](https://shopify.dev/docs/api/app-home/app-bridge-web-components) to the template.
-
-## July 2025
-
-Forked the [shopify-app-template repo](https://github.com/Shopify/shopify-app-template-remix)
-
 # @shopify/shopify-app-template-remix
 
 ## 2025.03.18
-
 -[#998](https://github.com/Shopify/shopify-app-template-remix/pull/998) Update to Vite 6
 
 ## 2025.03.01
-
 - [#982](https://github.com/Shopify/shopify-app-template-remix/pull/982) Add Shopify Dev Assistant extension to the VSCode extension recommendations
 
 ## 2025.01.31
-
 - [#952](https://github.com/Shopify/shopify-app-template-remix/pull/952) Update to Shopify App API v2025-01
 
 ## 2025.01.23
@@ -46,9 +34,9 @@ Forked the [shopify-app-template repo](https://github.com/Shopify/shopify-app-te
 ## 2024.12.04
 
 - [#891](https://github.com/Shopify/shopify-app-template-remix/pull/891) Enable remix future flags.
+-
 
 ## 2024.11.26
-
 - [888](https://github.com/Shopify/shopify-app-template-remix/pull/888) Update restResources version to 2024-10
 
 ## 2024.11.06
