@@ -2,18 +2,45 @@
 
 client_id = "deb44abfacf1f68a1c48a9f84a66d32c"
 name = "jiffy-gift"
-application_url = "https://shopify.dev/apps/default-app-home"
+handle = "jiffy-gift"
+application_url = "https://jiffy-474d30eac0fd.herokuapp.com"
 embedded = true
 
 [webhooks]
 api_version = "2026-01"
+
+ [[webhooks.subscriptions]]
+  topics = [ "app/scopes_update" ]
+  uri = "/webhooks/app/scopes_update"
+
+  [[webhooks.subscriptions]]
+  topics = [ "app/uninstalled" ]
+  uri = "/webhooks/app/uninstalled"
+
+  [[webhooks.subscriptions]]
+  topics = [
+  "orders/create",
+  "orders/delete",
+  "orders/edited",
+  "orders/paid"
+]
+  uri = "/webhooks/orders"
+
+  [[webhooks.subscriptions]]
+  topics = [ "products/create", "products/delete", "products/update" ]
+  uri = "/webhooks/products"
 
 [access_scopes]
 # Learn more at https://shopify.dev/docs/apps/tools/cli/configuration#access_scopes
 scopes = "read_assigned_fulfillment_orders, read_customers, read_discounts, read_gift_cards, read_inventory, read_merchant_managed_fulfillment_orders, read_orders, read_third_party_fulfillment_orders, write_assigned_fulfillment_orders, write_discounts, write_gift_cards, write_inventory, write_merchant_managed_fulfillment_orders, write_orders, write_products, write_third_party_fulfillment_orders"
 
 [auth]
-redirect_urls = [ "https://shopify.dev/apps/default-app-home/api/auth" ]
+redirect_urls = [
+  "https://jiffy-474d30eac0fd.herokuapp.com/auth/callback",
+  "https://jiffy-474d30eac0fd.herokuapp.com/auth/shopify/callback",
+  "https://jiffy-474d30eac0fd.herokuapp.com/api/auth/callback"
+]
+
 
 [build]
-automatically_update_urls_on_dev = true
+automatically_update_urls_on_dev = false
